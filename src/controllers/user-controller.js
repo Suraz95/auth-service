@@ -3,7 +3,7 @@ const { asyncHandler, ApiError, ApiResponse } = require("shared-utils");
 const { validationResult } = require("express-validator");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User.js");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 
 const registerUser = asyncHandler(async (req, res) => {
   const { name, username, phone, email, password, userType } = req.body;
