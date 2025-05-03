@@ -10,6 +10,7 @@ on:
 
 jobs:
   build:
+    environment: micro-service
     runs-on: ubuntu-latest
 
     steps:
