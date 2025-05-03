@@ -49,15 +49,15 @@ jobs:
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/c-compiler-auth:latest
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: build
 
-    steps:
-      - name: Deploy Auth Service (If applicable)
-        run: |
-          # Add your deploy commands here
-          echo "Deploying Auth Service..."
+  #   steps:
+  #     - name: Deploy Auth Service (If applicable)
+  #       run: |
+  #         # Add your deploy commands here
+  #         echo "Deploying Auth Service..."
 
   # Set environment variables for Auth Service deployment from GitHub Secrets
   env:
