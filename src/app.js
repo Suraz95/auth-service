@@ -21,7 +21,9 @@ app.use(express.json()); // Parse JSON bodies
 app.use(cookieParser()); // Parse cookies
 app.use(express.urlencoded({ extended: true, limit: "16kb" })); // Parse URL-encoded data
 app.use(express.static("public")); // Serve static files from "public" folder
-
+app.get("/", (req, res) => {
+  res.send("hello this is from auth service");
+})
 // Routes
 const userRouter = require("./routes/index.js");
 app.use("/api/v1/users/", userRouter);
